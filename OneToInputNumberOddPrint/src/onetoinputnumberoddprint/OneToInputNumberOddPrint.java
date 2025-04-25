@@ -12,16 +12,20 @@ public class OneToInputNumberOddPrint {
         Scanner s=new Scanner(System.in);
         System.out.print("How much you want to see Odd Number : ");
         int input=s.nextInt();
+        int sum=0;
         
         for(int i=1;i<input;i++){
         
             if(i%2==1){
             
-                System.out.print(+i+" ");
+                sum+=i;
+                System.out.print(+i+"+");
+                
             
             }
-        
+        System.out.println("Sum : "+sum);
         }
+        
     }
     
 }
