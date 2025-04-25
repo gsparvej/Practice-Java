@@ -14,18 +14,18 @@ public class OneToInputNumberOddPrint {
         int input=s.nextInt();
         int sum=0;
         
-        for(int i=1;i<input;i++){
+        for(int i=1;i<=input;i++){
         
             if(i%2==1){
             
                 sum+=i;
-                System.out.print(+i+"+");
+                System.out.print(i+"+");
                 
             
             }
-        System.out.println("Sum : "+sum);
-        }
         
+        }
+        System.out.println("= "+sum);
     }
     
 }
