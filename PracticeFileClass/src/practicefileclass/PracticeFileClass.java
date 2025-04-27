@@ -20,7 +20,7 @@ public class PracticeFileClass {
         
             System.out.println("Enter Folder Name ");
             String folderName=s.next();
-            System.out.print("Enter Content ");
+            System.out.print("Enter Content :");
             s.nextLine();
             String content=s.nextLine();
             
