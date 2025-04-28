@@ -21,7 +21,7 @@ public class LearnScannerClass {
             
             while(s.hasNext()){
             
-            String text=s.nextLine();
+                String text=s.nextLine();
             String [] myArray = text.split(" ");
             System.out.println(Arrays.toString(myArray));
             
