@@ -2,6 +2,7 @@
 package readdatafromwebusingtrycatch;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
@@ -17,7 +18,8 @@ public class ReadDataFromWebUsingTryCatch {
     public static void main(String[] args) {
        
         try {
-            URL url=new URL("https://www.facebook.com/index.html");
+          //  URL url=new URL("https://www.facebook.com/index.html");
+             URL url=new URL("https://www.aarong.com");
             Scanner s=new Scanner(url.openStream());
             Pattern p=Pattern.compile("<[^>]+>");
            
@@ -35,6 +37,10 @@ public class ReadDataFromWebUsingTryCatch {
              }
          
          }
+         
+            PrintWriter pw=new PrintWriter("C:\\Users\\MY COMPUTER\\Documents\\aarong.html");
+            pw.print(s);
+            pw.close();
             
         } catch (MalformedURLException ex) {
             Logger.getLogger(ReadDataFromWebUsingTryCatch.class.getName()).log(Level.SEVERE, null, ex);
