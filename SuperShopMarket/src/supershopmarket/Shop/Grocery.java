@@ -4,7 +4,7 @@ package supershopmarket.Shop;
 
 public class Grocery extends Shop {
     
-    private double gPrice;
+    double gPrice;
 
     public Grocery() {
     }
@@ -24,6 +24,21 @@ public class Grocery extends Shop {
 
     public void setgPrice(double gPrice) {
         this.gPrice = gPrice;
+    }
+
+    @Override
+    public double getSalePrice() {
+        
+        gPrice+=gPrice;
+        
+        return gPrice;
+        
+        
+    }
+     public double getTotalPrice(){
+   
+       return getgPrice();
+  
     }
     
     

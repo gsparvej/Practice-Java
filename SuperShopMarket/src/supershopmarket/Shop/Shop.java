@@ -64,6 +64,8 @@ public class Shop {
     }
 
     public double getTotalSalePrice() {
+        
+       
         return totalSalePrice;
     }
 
