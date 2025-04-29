@@ -64,6 +64,7 @@ public class Vegetables extends Grocery {
     
     public void setgPrice(double gPrice) {
         this.gPrice = gPrice;
+        gPrice+=gPrice;
     }
 
     public void setvPrice(double vPrice) {
@@ -73,22 +74,30 @@ public class Vegetables extends Grocery {
     @Override
     public double getSalePrice() {
          
-         gPrice+=gPrice;
+         vPrice+=vPrice;
        
-       return gPrice;
+       return vPrice;
     }
 
     @Override
     public double getTotalPrice() {
          
-        return getvPrice();
+       Grocery g1=new Grocery();
+       gPrice+=gPrice;
+       
+       return gPrice;
+         
     }
-    public double getTotalsalePrice(){
-    double total=getTotalPrice()+getSalePrice();
+    public  double getTotalsalePrice(){
+        Grocery g1=new Grocery();
+       
+    double total=g1.getSalePrice()+getSalePrice();
     
     
     return total;
     }
+
+   
   
     
     

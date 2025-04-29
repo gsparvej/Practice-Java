@@ -20,7 +20,7 @@ public class SuperShopMarket {
         System.out.println("Vegetables Total Price : "+v.getSalePrice());
         
         System.out.println(""+g.getTotalPrice());
-        System.out.println("------------------");
+        System.out.println("---------------");
         System.out.println(""+v.getTotalsalePrice());
     }
     
