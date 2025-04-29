@@ -21,23 +21,24 @@ public class PracticeReadWebData {
         String webName=s.next();
         System.out.print("Enter File Name : ");
         String fileName=s.next();
-        String result="";
+       
        
         try {
             URL url=new URL("https://"+webName);
             Scanner scan=new Scanner(url.openStream());
-            
+            Pattern p=Pattern.compile("<[^>]+>");
+             String result="";
             
             while(s.hasNext()){
             
                 result+=s.nextLine();
-                System.out.println(result);
+                
             
             }
             
             
             PrintWriter pw=new PrintWriter("C:\\Users\\MY COMPUTER\\Documents\\"+fileName+".html");
-            pw.print(result);
+            pw.println(result);
             System.out.println("Done !");
             pw.close();
            
