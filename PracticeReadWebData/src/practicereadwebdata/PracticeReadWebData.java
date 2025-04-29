@@ -37,7 +37,7 @@ public class PracticeReadWebData {
             }
             
             
-            PrintWriter pw=new PrintWriter("C:\\Users\\MY COMPUTER\\Documents\\"+fileName+".html");
+            PrintWriter pw=new PrintWriter("C:\\Users\\Admin\\Desktop\\"+fileName+".html");
             pw.println(result);
             System.out.println("Done !");
             pw.close();
