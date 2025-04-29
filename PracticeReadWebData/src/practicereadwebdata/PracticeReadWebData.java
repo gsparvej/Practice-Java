@@ -29,9 +29,9 @@ public class PracticeReadWebData {
             Pattern p=Pattern.compile("<[^>]+>");
              String result="";
             
-            while(s.hasNext()){
+            while(scan.hasNext()){
             
-                result+=s.nextLine();
+                result+=scan.nextLine();
                 
             
             }
