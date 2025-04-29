@@ -22,24 +22,29 @@ public class ReadDataFromWebUsingTryCatch {
              URL url=new URL("https://www.aarong.com");
             Scanner s=new Scanner(url.openStream());
             Pattern p=Pattern.compile("<[^>]+>");
+            String result=" ";
            
          //   System.out.println(s.nextLine());
          
          while(s.hasNext()){
          
-             String text=s.nextLine();
-             Matcher matcher=p.matcher(text);
-             System.out.println(text);
+             result=s.nextLine();
+             Matcher matcher=p.matcher(result);
+             System.out.println(result);
              
              while(matcher.find()){
              
-                 System.out.println(matcher.group());
+              System.out.println(matcher.group());
+           
+                
+                
              }
-         
+             
          }
          
             PrintWriter pw=new PrintWriter("C:\\Users\\MY COMPUTER\\Documents\\aarong.html");
-            pw.print(s);
+            pw.print(result);
+            System.out.println("Create Done ! ");
             pw.close();
             
         } catch (MalformedURLException ex) {
