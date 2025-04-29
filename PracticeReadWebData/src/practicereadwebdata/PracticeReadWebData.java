@@ -2,6 +2,7 @@
 package practicereadwebdata;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
@@ -14,12 +15,32 @@ public class PracticeReadWebData {
 
     
     public static void main(String[] args) {
+        
+        Scanner s=new Scanner(System.in);
+        System.out.print("Enter Web Address : ");
+        String webName=s.next();
+        System.out.print("Enter File Name : ");
+        String fileName=s.next();
+        String result="";
        
         try {
-            URL url=new URL("https://easyfashion.com.bd");
+            URL url=new URL("https://"+webName);
             Scanner scan=new Scanner(url.openStream());
-            System.out.println(scan.nextLine());
-            Pattern p=Pattern.compile("<[^>]+>");
+            
+            
+            while(s.hasNext()){
+            
+                result+=s.nextLine();
+                System.out.println(result);
+            
+            }
+            
+            
+            PrintWriter pw=new PrintWriter("C:\\Users\\MY COMPUTER\\Documents\\"+fileName+".html");
+            pw.print(result);
+            System.out.println("Done !");
+            pw.close();
+           
             
         } catch (MalformedURLException ex) {
             Logger.getLogger(PracticeReadWebData.class.getName()).log(Level.SEVERE, null, ex);
