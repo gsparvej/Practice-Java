@@ -16,34 +16,39 @@ public class ReadDataFromWebUsingTryCatch {
 
    
     public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter web address");
+        String myURL = scan.next();
+        System.out.println("Enter file name");
+        String fileName = scan.next();
        
         try {
-          //  URL url=new URL("https://www.facebook.com/index.html");
-             URL url=new URL("https://www.aarong.com");
+         
+             URL url=new URL("https://" + myURL);
             Scanner s=new Scanner(url.openStream());
             Pattern p=Pattern.compile("<[^>]+>");
-            String result=" ";
+            String result="";
            
          //   System.out.println(s.nextLine());
          
          while(s.hasNext()){
          
-             result=s.nextLine();
-             Matcher matcher=p.matcher(result);
-             System.out.println(result);
+//             s.nextLine();
+//             Matcher matcher=p.matcher(result);
+//             System.out.println(result);
              
-             while(matcher.find()){
+//             while(matcher.find()){
              
-              System.out.println(matcher.group());
+           result+=s.nextLine();
            
                 
                 
-             }
+//             }
              
          }
          
-            PrintWriter pw=new PrintWriter("C:\\Users\\MY COMPUTER\\Documents\\aarong.html");
-            pw.print(result);
+            PrintWriter pw=new PrintWriter("C:\\Users\\MY COMPUTER\\Documents\\"+fileName+".html");
+            pw.println(result);
             System.out.println("Create Done ! ");
             pw.close();
             
