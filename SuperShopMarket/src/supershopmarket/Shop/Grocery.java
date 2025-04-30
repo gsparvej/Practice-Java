@@ -1,10 +1,8 @@
-
 package supershopmarket.Shop;
 
-
 public class Grocery extends Shop {
-    
-    double gPrice;
+
+    private double gPrice;
 
     public Grocery() {
     }
@@ -26,20 +24,14 @@ public class Grocery extends Shop {
         this.gPrice = gPrice;
     }
 
+
+    
+    
+    
     @Override
-    public double getSalePrice() {
-        
-        gPrice+=gPrice;
-        
+    public double calculateTotalPrice() {
         return gPrice;
-        
-        
+
     }
-     public double getTotalPrice(){
-   
-       return getgPrice();
-  
-    }
-    
-    
+
 }

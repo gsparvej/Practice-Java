@@ -74,5 +74,12 @@ public class Shop {
     }
     
     
+    public double  calculateTotalPrice(){
+    
+    
+        return totalSalePrice;
+    }
+    
+    
     
 }

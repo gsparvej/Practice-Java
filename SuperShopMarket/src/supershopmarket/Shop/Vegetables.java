@@ -1,13 +1,8 @@
-
 package supershopmarket.Shop;
 
-
 public class Vegetables extends Grocery {
-    
+
     private double vPrice;
-    
-    
-    
 
 //    public Vegetables() {
 //    }
@@ -36,7 +31,6 @@ public class Vegetables extends Grocery {
 //        
 //        return vPrice;
 //    }
-
     public Vegetables() {
     }
 
@@ -58,47 +52,37 @@ public class Vegetables extends Grocery {
         return vPrice;
     }
 
-    public double getgPrice() {
-        return gPrice;
-    }
-    
-    public void setgPrice(double gPrice) {
-        this.gPrice = gPrice;
-        gPrice+=gPrice;
-    }
-
     public void setvPrice(double vPrice) {
         this.vPrice = vPrice;
     }
 
+//    @Override
+//    public double getTotalPrice() {
+//         
+//       Grocery g1=new Grocery();
+//       gPrice+=gPrice;
+//       
+//       return gPrice;
+//         
+//    }
+//    public  double getTotalsalePrice(){
+//        Grocery g1=new Grocery();
+//       
+//    double total= g1.getSalePrice()+getSalePrice();
+//    
+//    
+//    return total;
+//    }
     @Override
-    public double getSalePrice() {
-         
-         vPrice+=vPrice;
-       
-       return vPrice;
+    public double calculateTotalPrice() {
+        double totalPrice = getgPrice() + vPrice;
+        System.out.println(getgPrice() + "-------" + vPrice);
+        if (totalPrice > 7000) {
+            return totalPrice - (totalPrice * .10);
+        } else {
+            return totalPrice;
+        }
+
     }
 
-    @Override
-    public double getTotalPrice() {
-         
-       Grocery g1=new Grocery();
-       gPrice+=gPrice;
-       
-       return gPrice;
-         
-    }
-    public  double getTotalsalePrice(){
-        Grocery g1=new Grocery();
-       
-    double total=g1.getSalePrice()+getSalePrice();
-    
-    
-    return total;
-    }
-
-   
-  
-    
-    
 }
