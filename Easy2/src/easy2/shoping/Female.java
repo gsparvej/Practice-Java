@@ -38,7 +38,7 @@ public class Female extends Male{
     
     Scanner s=new Scanner(System.in);
     
-    
+    // ekhan theke suru korbo..........
     
     return salingDetail;
     }
