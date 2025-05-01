@@ -1,6 +1,7 @@
 
 package easy;
 
+import easy.shoping.Female;
 import easy.shoping.Male;
 import java.util.Scanner;
 
@@ -12,9 +13,11 @@ public class Easy {
       
         Scanner n=new Scanner(System.in);
         Male m=new Male();
+        Female f=new Female();
         
         m.getBothDetails();
-       // System.out.println(" "+m.getBothDetails());
+        f.getBothDetails();
+      
     }
     
 }
