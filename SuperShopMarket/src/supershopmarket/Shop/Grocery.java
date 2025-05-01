@@ -23,10 +23,6 @@ public class Grocery extends Shop {
     public void setgPrice(double gPrice) {
         this.gPrice = gPrice;
     }
-
-
-    
-    
     
     @Override
     public double calculateTotalPrice() {

@@ -14,12 +14,8 @@ public class SuperShopMarket {
         v.setvPrice(200 + 200 + 500);
 
         System.out.println("" + v.calculateTotalPrice());
-
-//        double gro=g.getSalePrice();
-//        double veg=v.getSalePrice();
-//        double total=gro+veg;
+        
         System.out.println("--------------");
-//        System.out.println("Total : "+total);
     }
 
 }
