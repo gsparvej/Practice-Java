@@ -4,6 +4,7 @@ public class Vegetables extends Grocery {
 
     private double vPrice;
 
+
     public Vegetables() {
     }
 
@@ -39,6 +40,9 @@ public class Vegetables extends Grocery {
             return totalPrice;
         }
 
+        
+    
+    
     }
 
 }

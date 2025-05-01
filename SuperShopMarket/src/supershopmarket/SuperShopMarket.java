@@ -11,7 +11,7 @@ public class SuperShopMarket {
         Vegetables v = new Vegetables();
 
         v.setgPrice(5000);
-        v.setvPrice(200 + 200 + 500);
+        v.setvPrice(200 + 200 + 5000);
 
         System.out.println("" + v.calculateTotalPrice());
         
