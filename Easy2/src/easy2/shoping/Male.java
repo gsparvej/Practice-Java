@@ -19,11 +19,13 @@ public class Male extends Shoping{
         this.mPrice = mPrice;
     }
 
-    public Male(String mItems, double mPrice, String customerName, String contactNumber, String customerAddress, Date buyDate, double salePrice, double totalPrice) {
-        super(customerName, contactNumber, customerAddress, buyDate, salePrice, totalPrice);
+    public Male(String mItems, double mPrice, String customerName, String contactNumber, String customerAddress, Date buyDate, double salePrice, double totalPrice, String productName) {
+        super(customerName, contactNumber, customerAddress, buyDate, salePrice, totalPrice, productName);
         this.mItems = mItems;
         this.mPrice = mPrice;
     }
+
+    
 
     @Override
     public String getCustomerDetails() {

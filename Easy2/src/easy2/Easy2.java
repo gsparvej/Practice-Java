@@ -12,7 +12,6 @@ public class Easy2 {
         
         Female f=new Female();
         Male m=new Male();
-       // System.out.println(""+f.getCustomerDetails());
         System.out.println(""+m.getCustomerDetails());
         
     }

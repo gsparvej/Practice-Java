@@ -12,17 +12,19 @@ public class Shoping {
     private Date buyDate;
     private double salePrice;
     private double totalPrice;
+    private String productName;
 
     public Shoping() {
     }
 
-    public Shoping(String customerName, String contactNumber, String customerAddress, Date buyDate, double salePrice, double totalPrice) {
+    public Shoping(String customerName, String contactNumber, String customerAddress, Date buyDate, double salePrice, double totalPrice, String productName) {
         this.customerName = customerName;
         this.contactNumber = contactNumber;
         this.customerAddress = customerAddress;
         this.buyDate = buyDate;
         this.salePrice = salePrice;
         this.totalPrice = totalPrice;
+        this.productName = productName;
     }
 
     public String getCustomerName() {
@@ -72,6 +74,16 @@ public class Shoping {
     public void setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
     }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+   
     
     
     
