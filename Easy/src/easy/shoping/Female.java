@@ -76,13 +76,14 @@ public class Female extends Male{
     }
     
     
-//    public void getFinalPrice(){
-//
-//        String total="";
-//        
-//        total=getBothDetails()
-//
-//
-//        }
+    public void getFinalPrice(){
+
+        String total="";
+      //  getBothDetails(sum);
+      
+        
+
+        return;
+        }
     
     }
