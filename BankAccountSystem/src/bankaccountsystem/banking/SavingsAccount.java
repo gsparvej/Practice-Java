@@ -42,12 +42,14 @@ public class SavingsAccount extends BankAccount {
 
     @Override
     public double getBalance() {
-        Scanner s=new Scanner(System.in);
-        System.out.print("Enter Your New Deposit Amount : ");
-        double amount=s.nextDouble();
-        balance+=amount;
+//        Scanner s=new Scanner(System.in);
+//        System.out.print("Enter Your New Deposit Amount : ");
+//        double amount=s.nextDouble();
+//        balance+=amount;
         
-        return setBalance(balance);
+     //   return setBalance(balance);
+     
+     return balance;
         
         
     }
@@ -55,12 +57,20 @@ public class SavingsAccount extends BankAccount {
 
     @Override
     public void getDeposit() {
-        setBalance(sInterestRate);
+      //  setBalance(sInterestRate);
+      double result;
+      //getBalance();
+      
+      result=setBalance()*0.5;
         
       
+        System.out.println("now ; "+result);
         
         
-        
+    }
+
+    private double setBalance() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     

@@ -12,8 +12,8 @@ public class BankAccountSystem {
         SavingsAccount sa=new SavingsAccount();
         
         sa.setBalance(5000);
-        System.out.println(" "+sa.getBalance());
-        
+     //   System.out.println(" nw "+sa.getBalance());
+      //  sa.getDeposit();
         
         
     }
