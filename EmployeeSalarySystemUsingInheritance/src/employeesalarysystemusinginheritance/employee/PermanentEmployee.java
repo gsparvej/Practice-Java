@@ -1,10 +1,6 @@
-
-
 package employeesalarysystemusinginheritance.employee;
 
 import java.util.Scanner;
-
-
 
 public class PermanentEmployee extends Employee {
     
