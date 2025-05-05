@@ -31,6 +31,7 @@ public class Book extends Library {
 
     @Override
     public String getdetail() {
+        
         Scanner s=new Scanner(System.in);
         System.out.println("Enter Book's Price : ");
         bPrice=s.nextInt();
