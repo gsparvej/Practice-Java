@@ -2,7 +2,7 @@
 
 package libraryitemusinginheritance2.newLibrary;
 
-
+// super class 
 
 public class Library2 {
     
