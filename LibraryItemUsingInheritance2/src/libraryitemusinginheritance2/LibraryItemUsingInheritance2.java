@@ -22,20 +22,22 @@ public class LibraryItemUsingInheritance2 {
         
         System.out.print("How Much Item You Bought : ");
         int bought=scan.nextInt();
-        scan.nextLine();
-        
+
         for(int i=1;i<=bought;i++){
         
         System.out.print("Its Book/Magazine/Newspaper : ");
-        String item=scan.nextLine();
-        scan.nextLine();
+        String item=scan.next();
+      //  scan.next();
         
             if(item.equalsIgnoreCase("Book")){
         
         System.out.print("Enter Book Name : ");
+        scan.nextLine();
         b.setName(scan.nextLine());
         System.out.print("Enter Author Name : ");
+       // scan.nextLine();
         b.setAuthor(scan.nextLine());
+      //  scan.nextLine();
         System.out.print("Enter Book's Title : ");
         b.setTitle(scan.nextLine());
         System.out.print("Enter Book's Price : ");
@@ -58,20 +60,8 @@ public class LibraryItemUsingInheritance2 {
             }
         
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+      
+        // ********* nicher part tuku manually book or magazine er jnno .............*****************
         
 //        System.out.print("Enter Book Name : ");
 //        b.setName(scan.nextLine());
