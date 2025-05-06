@@ -30,7 +30,7 @@ public class Magazine2 extends Library2 {
 
     @Override
     public String getDetails() {
-        return super.getDetails(); 
+        return "\nMagazine's Price : "+magaPrice+"\n"+ super.getDetails(); 
     }
     
     
