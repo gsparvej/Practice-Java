@@ -27,6 +27,11 @@ public class Newspaper2 extends Library2 {
     public void setNewsPrice(int newsPrice) {
         this.newsPrice = newsPrice;
     }
+
+    @Override
+    public String getDetails() {
+        return "\nNewspaper Price : "+newsPrice+"\n"+ super.getDetails(); 
+    }
     
     
 }
