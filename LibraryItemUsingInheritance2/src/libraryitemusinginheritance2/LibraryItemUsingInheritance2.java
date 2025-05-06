@@ -110,7 +110,7 @@ public class LibraryItemUsingInheritance2 {
         System.out.println("--------------------------");
         System.out.println("Magazine's Details : "+m.getDetails());
         System.out.println("--------------------------");
-        System.out.println("Magazine's Details : "+n.getDetails());
+        System.out.println("Newspaper's Details : "+n.getDetails());
     }
     
 }
