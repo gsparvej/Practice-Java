@@ -1,11 +1,7 @@
 
 package libraryitemusinginheritance2;
-
-
-import java.awt.print.Book;
 import java.util.Scanner;
 import libraryitemusinginheritance2.newLibrary.Book2;
-import libraryitemusinginheritance2.newLibrary.Library2;
 import libraryitemusinginheritance2.newLibrary.Magazine2;
 import libraryitemusinginheritance2.newLibrary.Newspaper2;
 
@@ -16,8 +12,6 @@ public class LibraryItemUsingInheritance2 {
     public static void main(String[] args) {
        
         Scanner scan=new Scanner(System.in);
-        
-        Library2 l=new Library2();
         Book2 b=new Book2();
         Magazine2 m=new Magazine2();
         Newspaper2 n=new Newspaper2();
