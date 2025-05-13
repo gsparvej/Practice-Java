@@ -43,5 +43,11 @@ public class Product {
         this.productId = productId;
     }
     
+    public String getDetails(){
     
+    
+    return "Product Name : "+productName+
+            "\nProduct Id : "+productId+
+            "\nProduct Price :"+productPrice;
+    }
 }

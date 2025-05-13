@@ -27,6 +27,12 @@ public class FoodItem extends Product{
     public void setExpirydate(Date expirydate) {
         this.expirydate = expirydate;
     }
+
+    @Override
+    public String getDetails() {
+        
+        return super.getDetails()+"\nExpiry Date : "+expirydate; 
+    }
     
     
 }

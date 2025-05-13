@@ -27,6 +27,12 @@ public class Clothing extends Product{
     public void setClothSize(String clothSize) {
         this.clothSize = clothSize;
     }
+
+    @Override
+    public String getDetails() {
+        
+        return super.getDetails()+"\nSize : "+clothSize; 
+    }
     
     
 }
