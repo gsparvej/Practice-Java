@@ -18,8 +18,20 @@ public class Cart extends Product{
     double total=0;
     for(int i=0;i<products.length;i++){
     
-        
-    total+=products[i].(super.productPrice);
+        total+=products[i].getProductPrice();
+   
+    }
+    return total;
+    }
+    
+    
+    public void displayDetails(){
+    
+    for(Product p:products){
+        System.out.println("Your Products Details : ");
+        System.out.println("---------------");
+        System.out.println(""+p.getDetails());
+    
     }
     
     }
