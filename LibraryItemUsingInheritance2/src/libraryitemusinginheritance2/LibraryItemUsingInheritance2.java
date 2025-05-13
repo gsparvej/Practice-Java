@@ -5,6 +5,7 @@ import libraryitemusinginheritance2.newLibrary.Book2;
 import libraryitemusinginheritance2.newLibrary.Magazine2;
 import libraryitemusinginheritance2.newLibrary.Newspaper2;
 
+
 public class LibraryItemUsingInheritance2 {
 
     public static void main(String[] args) {
@@ -13,6 +14,7 @@ public class LibraryItemUsingInheritance2 {
         Book2 b = new Book2();
         Magazine2 m = new Magazine2();
         Newspaper2 n = new Newspaper2();
+       
 
         System.out.print("How Much Item You Bought : ");
         int bought = scan.nextInt();
@@ -65,6 +67,7 @@ public class LibraryItemUsingInheritance2 {
             }
 
         }
+        
 
         // ********* nicher part tuku manually book or magazine er jnno .............*****************
 //        System.out.print("Enter Book Name : ");
@@ -102,6 +105,7 @@ public class LibraryItemUsingInheritance2 {
         System.out.println("Magazine's Details : " + m.getDetails());
         System.out.println("--------------------------");
         System.out.println("Newspaper's Details : " + n.getDetails());
+        
     }
 
 }
