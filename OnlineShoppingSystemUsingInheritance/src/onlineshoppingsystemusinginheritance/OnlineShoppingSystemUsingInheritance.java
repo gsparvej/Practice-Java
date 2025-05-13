@@ -12,23 +12,7 @@ public class OnlineShoppingSystemUsingInheritance {
 
     public static void main(String[] args) {
         
-//        Product p1=new Clothing();
-//        Product p2=new Electronics();
-//      //  Product p3=new FoodItem( "Chocolates", 1200, "co090");
-//      
-//      p1.setProductName("Shirt");
-//      p1.setProductPrice(900);
-//      p1.setProductId("s-0012");
-//      
-//      
-//      p2.setProductName("AirConditioner");
-//      p2.setProductPrice(55000);
-//      p2.setProductId("AC\00123");
-//      
-//      
-//        Product[] items = { p1, p2};
-//        Cart myCart = new Cart(items);
-        
+
            Clothing c=new Clothing();
            Electronics e=new Electronics();
            
