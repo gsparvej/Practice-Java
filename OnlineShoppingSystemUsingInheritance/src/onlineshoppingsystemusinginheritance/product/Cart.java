@@ -14,14 +14,21 @@ public class Cart extends Product{
     }
     
     
-    public double calculateTotal(){
+    public String calculateTotal(){
     double total=0;
+    double bonus=0;
     for(int i=0;i<products.length;i++){
     
         total+=products[i].getProductPrice();
    
     }
-    return total;
+    
+    if(total>50000){
+    
+         bonus=total-total*0.15;
+    
+    }
+    return "Your Total Price Is : "+total+"\nAfter 15% Discount You Must Pay : "+bonus;
     }
     
     

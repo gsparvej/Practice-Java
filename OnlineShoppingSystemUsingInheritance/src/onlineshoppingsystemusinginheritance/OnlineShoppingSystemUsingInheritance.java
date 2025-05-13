@@ -31,7 +31,7 @@ public class OnlineShoppingSystemUsingInheritance {
         
         myCart.displayDetails();
         System.out.println("-----------------");
-        System.out.println("Total Price : "+myCart.calculateTotal());
+        System.out.println(myCart.calculateTotal());
       
     }
     
