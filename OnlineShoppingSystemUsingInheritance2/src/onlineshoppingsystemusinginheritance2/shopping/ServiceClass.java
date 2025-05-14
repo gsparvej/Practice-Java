@@ -19,14 +19,26 @@ public class ServiceClass extends Product2{
     
     public String calculateTotal(){
     double total=0;
+    double bonus=0;
     for(int i=0;i<product.length;i++){
     
         total+=product[i].getProductPrice();
     
+    }
+    
+    if(total>30000){
+    
+        bonus=total-total*0.08;
+        
+    }
+    
+    else if(total>50000){
+    bonus=total-total*0.15;
+        
     
     }
     
-    return "Total : "+total;
+    return "Total : "+total+"\nAfter discount you must pay : "+bonus;
     }
     
     public void getDisplayInfo(){

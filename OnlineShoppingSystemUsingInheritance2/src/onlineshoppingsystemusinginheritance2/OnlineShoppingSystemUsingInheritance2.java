@@ -1,6 +1,7 @@
 
 package onlineshoppingsystemusinginheritance2;
 
+import java.util.Scanner;
 import onlineshoppingsystemusinginheritance2.shopping.Clothes;
 import onlineshoppingsystemusinginheritance2.shopping.Electronics;
 import onlineshoppingsystemusinginheritance2.shopping.Grocery;
@@ -13,6 +14,9 @@ public class OnlineShoppingSystemUsingInheritance2 {
    
     public static void main(String[] args) {
         
+        Scanner s=new Scanner(System.in);
+        
+        
         Clothes c=new Clothes();
         Electronics e=new Electronics();
         Grocery g=new Grocery();
@@ -23,10 +27,30 @@ public class OnlineShoppingSystemUsingInheritance2 {
         c.setProductId("S-0011");
         c.setProductPrice(950);
         
+//        System.out.println("How Much You Bought ");
+//        int demandClothes=s.nextInt();
+//        for(int i=1;i<=demandClothes;i++){
+//        
+//            System.out.print("Enter Your Buying Item Name :");
+//            c.setClothesItem(s.next());
+//            System.out.print("Enter Product Size :");
+//            c.setClothSize(s.next());
+//            System.out.print("Enter Product ID :");
+//            c.setProductId(s.next());
+//            System.out.print("Enter Product Price : ");
+//            c.setProductPrice(s.nextInt());
+//        
+//        
+//        }
+        
+        
+        
+        
+        
         e.setElectroItem("Air Conditioner ");
         e.setProductId("A/C-9909");
         e.setWarranty("10 Years ");
-        e.setProductPrice(60000);
+        e.setProductPrice(30000);
         
         g.setGroceryItem("Fish,Beef,Vegetables ");
         g.setProductId("f-909,b-075,v-001");
@@ -38,7 +62,7 @@ public class OnlineShoppingSystemUsingInheritance2 {
         System.out.println("Details Your Products : ");
         
         myService.getDisplayInfo();
-        System.out.println("Total : "+myService.calculateTotal());
+        System.out.println(myService.calculateTotal());
     }
     
 }
