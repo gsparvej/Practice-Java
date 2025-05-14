@@ -28,7 +28,8 @@ public class OnlineShoppingSystemUsingInheritance {
 
            Product[] items = {c,e};
         Cart myCart = new Cart(items);
-        
+        System.out.println("-----------------");
+        System.out.println("Clothing : "+c.getDetails());
         myCart.displayDetails();
         System.out.println("-----------------");
         System.out.println(myCart.calculateTotal());
