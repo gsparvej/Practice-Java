@@ -12,10 +12,7 @@ public class ServiceClass extends Product2{
         this.product = product;
     }
 
-//    public ServiceClass(Product2[] product, int productPrice, String productId) {
-//        super(productPrice, productId);
-//        this.product = product;
-//    }
+
     
     public String calculateTotal(){
     double total=0;
