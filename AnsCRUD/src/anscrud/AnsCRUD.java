@@ -26,7 +26,6 @@ public class AnsCRUD {
         showEmp();
         
         deleteEmp(5);
-        
         System.out.println("------After Delete-------");
         showEmp();
         
