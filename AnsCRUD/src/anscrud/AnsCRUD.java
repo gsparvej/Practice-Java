@@ -17,15 +17,15 @@ public class AnsCRUD {
     
     public static void main(String[] args) {
         
-        saveEmp("Rakib", "Executive", 22000f);
+        saveEmp("Rahmat", "Executive", 18000f);
         System.out.println("-----After Save-------");
         showEmp();
         
-        updateEmp(3, "Atik", "Executive", 21000f);
+        updateEmp(6, "Sadiar", "Executive", 21000f);
         System.out.println("-------After Update-------");
         showEmp();
         
-        deleteEmp(3);
+        deleteEmp(5);
         
         System.out.println("------After Delete-------");
         showEmp();
