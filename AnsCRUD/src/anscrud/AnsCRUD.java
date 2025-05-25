@@ -17,47 +17,47 @@ public class AnsCRUD {
     
     public static void main(String[] args) {
         
-        saveTourist("Rahmat", "Barishal", "Ranggamati", 6500f);
+        saveEmp("Rakib", "Executive", 22000f);
         System.out.println("-----After Save-------");
-        showTourist();
+        showEmp();
         
-        updateTourist(4, "Parvej", "Potuakhali", "Sylhet", 4900f);
+        updateEmp(3, "Atik", "Executive", 21000f);
         System.out.println("-------After Update-------");
-        showTourist();
+        showEmp();
         
-        deleteTourist(1);
+        deleteEmp(3);
+        
         System.out.println("------After Delete-------");
-        showTourist();
+        showEmp();
         
         
     }
     
-    public static void saveTourist(String name,String address,String tourPlace,float totalCost){
+    public static void saveEmp(String name,String designation,float salary){
     
-        sql="insert into travel(name,address,tourPlace,totalCost) values(?,?,?,?)";
+        sql="insert into emp(name,designation,salary) values(?,?,?)";
         try {
             ps=cu.getCon().prepareStatement(sql);
             ps.setString(1, name);
-            ps.setString(2, address);
-            ps.setString(3, tourPlace);
-            ps.setFloat(4, totalCost);
+            ps.setString(2, designation);
+            ps.setFloat(3, salary);
             
             ps.executeUpdate();
             ps.close();
             cu.getCon().close();
-            System.out.println("Travel's table Data Save Successfully ! ");
+            System.out.println("Employees table Data Save Successfully ! ");
             
         } catch (SQLException ex) {
-            System.out.println("Travel's table Data Save Unsccessful ! ");
+            System.out.println("Employees  table Data Save Unsccessful ! ");
             Logger.getLogger(AnsCRUD.class.getName()).log(Level.SEVERE, null, ex);
         }
     
     }
     
     
-    public static void showTourist(){
+    public static void showEmp(){
     
-        sql="select * from travel ";
+        sql="select * from emp ";
         try {
             ps=cu.getCon().prepareStatement(sql);
             ResultSet rs=ps.executeQuery();
@@ -66,15 +66,13 @@ public class AnsCRUD {
             
                 int id=rs.getInt("id");
                 String name=rs.getString("name");
-                String address=rs.getString("address");
-                String tourPlace=rs.getString("tourPlace");
-                float totalCost=rs.getFloat("totalCost");
+                String designation=rs.getString("designation");
+                float salary=rs.getFloat("salary");
                 
                 System.out.println("ID : "+id+
-                        " Name : "+name+
-                        " Address : "+address+
-                        " Tour Place : "+tourPlace+
-                        " Cost : "+totalCost);
+                        ", Name : "+name+
+                        ", Designation : "+designation+
+                        ", Salary : "+salary);
             
             }
             ps.executeQuery();
@@ -89,16 +87,15 @@ public class AnsCRUD {
     }
     
     
-    public static void updateTourist(int id,String name, String address, String tourPlace, float totalCost){
-    sql="update travel set  name=?,address=?,tourPlace=? ,totalCost=? where id =? ";
+    public static void updateEmp(int id,String name, String designation,  float salary){
+    sql="update emp set  name=?,designation=?,salary=? where id =? ";
     
         try {
             ps=cu.getCon().prepareStatement(sql);
             ps.setString(1, name);
-            ps.setString(2, address);
-            ps.setString(3, tourPlace);
-            ps.setFloat(4, totalCost);
-            ps.setInt(5, id);
+            ps.setString(2, designation);
+            ps.setFloat(3, salary);
+            ps.setInt(4, id);
             
             ps.executeUpdate();
             ps.close();
@@ -114,9 +111,9 @@ public class AnsCRUD {
     
     }
     
-    public static void deleteTourist(int id){
+    public static void deleteEmp(int id){
     
-        sql="delete from travel where id=?";
+        sql="delete from emp where id=?";
         
         try {
             ps=cu.getCon().prepareStatement(sql);

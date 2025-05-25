@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 public class CrudUtil {
     private Connection con=null;
-   private String url="jdbc:mysql://localhost:3306/tourist";
+   private String url="jdbc:mysql://localhost:3306/crud";
    private String user="root";
    private String password="1234";
    private String driver="com.mysql.cj.jdbc.Driver";
