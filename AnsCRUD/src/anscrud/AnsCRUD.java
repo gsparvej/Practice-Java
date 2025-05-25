@@ -25,22 +25,22 @@ public class AnsCRUD {
         System.out.println("-------After Update-------");
         showTourist();
         
-        deleteTourist(2);
+        deleteTourist(1);
         System.out.println("------After Delete-------");
         showTourist();
         
         
     }
     
-    public static void saveTourist(String name,String address,String tourPlace,float cost){
+    public static void saveTourist(String name,String address,String tourPlace,float totalCost){
     
-        sql="insert into travel(name,address,tourPlace,cost) values(?,?,?,?)";
+        sql="insert into travel(name,address,tourPlace,totalCost) values(?,?,?,?)";
         try {
             ps=cu.getCon().prepareStatement(sql);
             ps.setString(1, name);
             ps.setString(2, address);
             ps.setString(3, tourPlace);
-            ps.setFloat(4, cost);
+            ps.setFloat(4, totalCost);
             
             ps.executeUpdate();
             ps.close();
@@ -68,13 +68,13 @@ public class AnsCRUD {
                 String name=rs.getString("name");
                 String address=rs.getString("address");
                 String tourPlace=rs.getString("tourPlace");
-                Float cost=rs.getFloat("cost");
+                float totalCost=rs.getFloat("totalCost");
                 
                 System.out.println("ID : "+id+
                         " Name : "+name+
                         " Address : "+address+
                         " Tour Place : "+tourPlace+
-                        " Cost : "+cost);
+                        " Cost : "+totalCost);
             
             }
             ps.executeQuery();
@@ -89,15 +89,15 @@ public class AnsCRUD {
     }
     
     
-    public static void updateTourist(int id,String name, String address, String tourPlace, float cost){
-    sql="update travel set  name=?,address=?,tourPlace=? ,cost=? where id =? ";
+    public static void updateTourist(int id,String name, String address, String tourPlace, float totalCost){
+    sql="update travel set  name=?,address=?,tourPlace=? ,totalCost=? where id =? ";
     
         try {
             ps=cu.getCon().prepareStatement(sql);
             ps.setString(1, name);
             ps.setString(2, address);
             ps.setString(3, tourPlace);
-            ps.setFloat(4, cost);
+            ps.setFloat(4, totalCost);
             ps.setInt(5, id);
             
             ps.executeUpdate();
